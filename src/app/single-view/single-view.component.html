@@ -1,0 +1,32 @@
+<div fxFlex.gt-lg="99" fxFlex.gt-md="99" fxFlex.gt-xs="100" fxFlex="100">
+    <mat-card>
+        <mat-tab-group *ngIf="blog">
+            <mat-tab label="Post"  >
+                <mat-card-content>
+                    <div class="d-flex no-blcok" id="showFristBlog">
+                        <div class="p-b-20 b-b m-b-30">
+                            <div fxLayout="row wrap">
+                                <div fxFlex.gt-md="40" class="mb-4" fxFlex="100">
+                                    <!-- <img class="img-responsive rounded" width="400" src="{{ blog.featured_image }}"
+                                        alt="" /> -->
+                                </div>
+                            </div>
+                            <div class="display-card">
+                                <h4 color="headingtext">{{ blog.title.rendered }}</h4>
+                                <p [innerHTML]="blog.content.rendered"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="row mb-3 mt-3">
+                        <div class="col-6">
+                            <button (click)="previous()">Previous</button>
+                        </div>
+                        <div class="col-6">
+                            <button (click)="next()">Next</button>
+                        </div>
+                    </div> -->
+                </mat-card-content>
+            </mat-tab>
+        </mat-tab-group>
+    </mat-card>
+</div>

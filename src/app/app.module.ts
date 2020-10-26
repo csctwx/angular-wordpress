@@ -18,13 +18,21 @@ import { DemoMaterialModule } from './demo-material-module';
 import { SharedModule } from './shared/shared.module';
 import { SpinnerComponent } from './shared/spinner.component';
 
+import { ViewComponent } from './view/view.component';
+import { SingleViewComponent } from './single-view/single-view.component';
+
+import { ApiService } from './api.service';
+import { ResourceService } from './services/resource.service';
+
 @NgModule({
   declarations: [
     AppComponent,
     FullComponent,
     AppHeaderComponent,
     SpinnerComponent,
-    AppSidebarComponent
+    AppSidebarComponent,
+    ViewComponent,
+    SingleViewComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +48,9 @@ import { SpinnerComponent } from './shared/spinner.component';
     {
       provide: LocationStrategy,
       useClass: PathLocationStrategy
-    }
+    },
+    ApiService,
+    ResourceService
   ],
   bootstrap: [AppComponent]
 })

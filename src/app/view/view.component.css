@@ -1,0 +1,27 @@
+.position-relative {
+    position: relative;
+}
+
+.add-contact {
+    position: absolute;
+    right: 17px;
+    top: 57px;
+}
+
+.row .col-6 {
+    text-align: center;
+}
+
+.row .col-6 button {
+    border-radius: 20px;
+    border: none;
+    background-color: #e6294b;
+    padding: 10px 40px;
+    color: #fff;
+}
+
+.row .col-6 button:hover {
+    border: 1px solid #e6294b;
+    color: #e6294b;
+    background-color: #fff;
+}
