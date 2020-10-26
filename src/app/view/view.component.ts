@@ -21,7 +21,6 @@ export class ViewComponent implements OnInit {
     if (!this.resource.blogs) {
       this.loading = true;
       this.apiService.getBlogs().subscribe(response => {
-        console.log(response);
         this.loading = false;
         this.blogData = response;
         this.resource.blogs = response;
@@ -35,7 +34,6 @@ export class ViewComponent implements OnInit {
   next() {
     this.page ++;
     this.apiService.getPageBlog(this.page).subscribe(data => {
-      console.log(data);
       if (data) {
         this.blogData = data;
       }
@@ -45,7 +43,6 @@ export class ViewComponent implements OnInit {
     if (this.page > 1) {
       this.page --;
       this.apiService.getPageBlog(this.page).subscribe(data => {
-        console.log(data);
         if (data) {
           this.blogData = data;
         }
